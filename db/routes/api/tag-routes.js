@@ -12,12 +12,15 @@ router.get('/', (req, res) => {
         model: Product
       }
     }
+
   )
     .then(tagData => res.json(tagData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+
+
 });
 
 router.get('/:id', (req, res) => {
@@ -51,6 +54,7 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 router.put('/:id', (req, res) => {
   
